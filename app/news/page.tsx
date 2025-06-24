@@ -9,7 +9,8 @@ function News() {
       <PageHeader
         title="News"
         subtitle="News from our events"
-        backgroundImage="/heros/who-are-we-hero.png"
+        backgroundImage="/heros/news-hero.jpg"
+        position="top"
       />
       <div className="">
         <NewsList news={news} />

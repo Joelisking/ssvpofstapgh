@@ -3,6 +3,7 @@ import { Manrope } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/shared/navbar';
 import Footer from '@/components/shared/navbar/footer';
+import WhatsAppButton from '@/components/shared/whatsapp-button';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -26,6 +27,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

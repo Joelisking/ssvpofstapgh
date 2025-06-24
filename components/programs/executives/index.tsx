@@ -31,7 +31,7 @@ function Executives() {
           </p>
           <Carousel
             images={executivesCarouselImages}
-            height={'350px'}
+            height={'500px'}
           />
         </div>
       </Container>

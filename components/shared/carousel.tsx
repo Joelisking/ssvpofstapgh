@@ -121,14 +121,14 @@ function Carousel({
               <>
                 <button
                   onClick={goToPrevious}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-3 rounded-full transition-all duration-200 z-10 backdrop-blur-sm"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/40 bg-opacity-50 hover:bg-opacity-75 text-white p-3 rounded-full transition-all duration-200 z-10 backdrop-blur-sm"
                   aria-label="Previous image">
                   <Icon name="ChevronLeft" size={24} />
                 </button>
 
                 <button
                   onClick={goToNext}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-3 rounded-full transition-all duration-200 z-10 backdrop-blur-sm"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/40 bg-opacity-50 hover:bg-opacity-75 text-white p-3 rounded-full transition-all duration-200 z-10 backdrop-blur-sm"
                   aria-label="Next image">
                   <Icon name="ChevronRight" size={24} />
                 </button>

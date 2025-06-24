@@ -10,6 +10,7 @@ export default function GalleryPage() {
       <PageHeader
         title="Gallery"
         subtitle="Pictures of previous events"
+        backgroundImage="/heros/gallery-header.jpg"
       />
       <Container className="mt-12 md:mt-20">
         {/* Multiple gallery examples */}
@@ -34,7 +35,8 @@ export default function GalleryPage() {
               images={sampleImages}
               layout="grid"
               maxColumns={4}
-              showCaptions={true}
+              showCaptions={false}
+              showCategories={false}
             />
           </section>
 

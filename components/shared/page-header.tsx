@@ -4,11 +4,13 @@ interface PageHeaderProps {
   title: string;
   subtitle?: string;
   backgroundImage?: string;
+  position?: 'center' | 'left' | 'right' | 'top' | 'bottom';
 }
 
 function PageHeader({
   title,
   subtitle,
+  position = 'center',
   backgroundImage = '/heros/activity-hero.jpeg',
 }: PageHeaderProps) {
   return (
@@ -16,7 +18,7 @@ function PageHeader({
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: position,
       }}
       className="h-[40vh] bg-center bg-no-repeat">
       <Container className="flex items-center h-full">

@@ -8,7 +8,7 @@ function Programs() {
       <PageHeader
         title="Programs"
         subtitle="Programs for the year"
-        backgroundImage="/heros/who-are-we-hero.png"
+        backgroundImage="/heros/programs-hero.png"
       />
       <Executives />
       <UpcomingPrograms />

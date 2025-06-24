@@ -120,18 +120,6 @@ export function Lightbox({
           className="max-w-full max-h-full object-contain"
           priority
         />
-
-        {/* Caption */}
-        {currentImage.caption && (
-          <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
-            <p className="text-center">{currentImage.caption}</p>
-          </div>
-        )}
-      </div>
-
-      {/* Image counter */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-sm">
-        {currentIndex + 1} / {images.length}
       </div>
     </div>
   );
