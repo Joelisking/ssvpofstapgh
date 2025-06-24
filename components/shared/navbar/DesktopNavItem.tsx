@@ -31,12 +31,12 @@ const DesktopNavItem: React.FC<NavItem> = ({
       )}
 
       {subItems && (
-        <div className="absolute left-0 top-full hidden group-hover:block bg-white shadow-lg rounded-md py-2 min-w-[200px] z-50">
+        <div className="absolute left-0 top-full hidden group-hover:block bg-white shadow-lg rounded-2xl p-2 min-w-[200px] z-50">
           {subItems.map((item, index) => (
             <Link
               key={index}
               href={item.url || '#'}
-              className="block px-4 py-2 hover:bg-gray-100 text-black">
+              className="block px-4 py-2 hover:bg-gray-100 text-black rounded-2xl">
               {item.text}
             </Link>
           ))}
