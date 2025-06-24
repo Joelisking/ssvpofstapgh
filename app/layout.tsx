@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Manrope } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/shared/navbar';
+import Footer from '@/components/shared/navbar/footer';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`antialiased`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

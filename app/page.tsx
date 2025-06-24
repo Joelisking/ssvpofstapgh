@@ -3,7 +3,6 @@ import UpcomingEvents from '@/components/home/upcoming-events';
 import HistoricalMessage from '@/components/home/historical-message';
 import Objective from '@/components/home/objective';
 import { NewsSection } from '@/components/home/news';
-import ContactSection from '@/components/home/contact';
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
       <HistoricalMessage />
       <Objective />
       <NewsSection />
-      <ContactSection />
     </main>
   );
 }

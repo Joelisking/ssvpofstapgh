@@ -6,7 +6,7 @@ import { sampleImages } from '@/lib/data';
 
 export default function GalleryPage() {
   return (
-    <main className="min-h-screen bg-gray-50 pb-8">
+    <main className="min-h-screen">
       <PageHeader
         title="Gallery"
         subtitle="Pictures of previous events"

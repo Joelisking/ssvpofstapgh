@@ -5,7 +5,7 @@ import React from 'react';
 
 function Activities() {
   return (
-    <main className="min-h-screen pb-8 sm:pb-12 md:pb-16">
+    <main className="min-h-screen">
       <PageHeader title="Activities" subtitle="Our Outreaches" />
       <Training />
       <CoreActivities />

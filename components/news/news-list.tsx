@@ -8,7 +8,7 @@ interface NewsListProps {
 
 function NewsList({ news }: NewsListProps) {
   return (
-    <section className="py-8 sm:py-12 lg:py-16">
+    <section className="pt-8 sm:pt-12 lg:pt-16">
       <Container>
         <div className="grid grid-cols-1 gap-8">
           {news.map((item) => (

@@ -11,7 +11,7 @@ function News() {
         subtitle="News from our events"
         backgroundImage="/heros/who-are-we-hero.png"
       />
-      <div className="pb-8 sm:pb-12">
+      <div className="">
         <NewsList news={news} />
       </div>
     </main>
