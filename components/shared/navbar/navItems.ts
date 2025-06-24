@@ -1,0 +1,30 @@
+export interface NavItem {
+  text: string;
+  url?: string;
+  subItems?: NavItem[];
+}
+
+export const navItems: NavItem[] = [
+  // { text: 'Home', url: '/' },
+  {
+    text: 'About Us',
+    subItems: [{ text: 'Who Are We', url: '/who-are-we' }],
+  },
+  {
+    text: 'Programs',
+    url: '/programs',
+  },
+  {
+    text: 'Activities',
+    url: '/activities',
+  },
+  {
+    text: 'News',
+    url: '/news',
+  },
+  {
+    text: 'Gallery',
+    url: '/gallery',
+  },
+  { text: 'Contact', url: '/contact' },
+];
