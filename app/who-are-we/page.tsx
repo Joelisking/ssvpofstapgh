@@ -7,13 +7,18 @@ import LogoExplanation from '@/components/about/who-are-we/logo-explanation';
 import Presidents from '@/components/about/who-are-we/presidents';
 import Sisters from '@/components/about/who-are-we/sisters';
 import Container from '@/components/shared/container';
+import PageHeader from '@/components/shared/page-header';
 
 function WhoAreWe() {
   return (
     <main>
+      <PageHeader
+        title="About Us"
+        subtitle="History of the Society of St. Vincent de Paul, Legon Conference"
+        backgroundImage="/heros/who-are-we-hero.png"
+      />
       <History />
-
-      <section className="mt-16">
+      <section className="mt-12 md:mt-20">
         <Container>
           <div className="p-8 bg-secondary rounded-2xl">
             <FoundingMembers />

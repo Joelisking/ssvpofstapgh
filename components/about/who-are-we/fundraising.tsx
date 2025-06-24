@@ -4,7 +4,7 @@ import MemberCard from './member-card';
 
 function Fundraising() {
   return (
-    <section className="mt-32">
+    <section className="mt-12 md:mt-20">
       <h2 className="text-primary text-3xl font-bold">Fundraising</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-4">
         <div>

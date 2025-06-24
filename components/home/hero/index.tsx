@@ -6,7 +6,7 @@ import { carouselImages } from '@/lib/data';
 
 function Hero() {
   return (
-    <section>
+    <section className="mt-20 md:mt-40">
       <Container>
         <SectionHeader
           highlightedWord="St.Vincent de Paul"

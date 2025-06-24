@@ -4,7 +4,7 @@ import ProgramCard from './program-card';
 
 function UpcomingPrograms() {
   return (
-    <section className="mt-12">
+    <section className="mt-12 md:mt-20">
       <Container>
         <h2 className="text-2xl uppercase text-primary font-extrabold">
           Detailed Description of Upcoming 2024 Programs for the Year

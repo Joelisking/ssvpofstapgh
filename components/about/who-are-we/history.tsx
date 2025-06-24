@@ -5,7 +5,7 @@ import Container from '../../shared/container';
 
 function History() {
   return (
-    <Container>
+    <Container className="mt-12 md:mt-20">
       <section className="bg-secondary p-8 rounded-2xl">
         <div className="flex items-center gap-4 mb-6">
           <Image

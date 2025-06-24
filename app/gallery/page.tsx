@@ -1,12 +1,17 @@
 'use client';
 import { Gallery } from '@/components/gallery/gallery-grids';
 import Container from '@/components/shared/container';
+import PageHeader from '@/components/shared/page-header';
 import { sampleImages } from '@/lib/data';
 
 export default function GalleryPage() {
   return (
-    <div className="min-h-screen bg-gray-50 pb-8">
-      <Container>
+    <main className="min-h-screen bg-gray-50 pb-8">
+      <PageHeader
+        title="Gallery"
+        subtitle="Pictures of previous events"
+      />
+      <Container className="mt-12 md:mt-20">
         {/* Multiple gallery examples */}
         <div className="space-y-16">
           {/* Bento Layout */}
@@ -46,6 +51,6 @@ export default function GalleryPage() {
           </section> */}
         </div>
       </Container>
-    </div>
+    </main>
   );
 }

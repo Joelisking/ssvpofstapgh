@@ -11,7 +11,7 @@ const columns: TableColumn<{ role: string; name: string }>[] = [
 
 function Executives() {
   return (
-    <section>
+    <section className="mt-12 md:mt-20">
       <Container className="">
         <div className="bg-secondary rounded-2xl p-4 sm:p-6 md:p-8">
           <Table

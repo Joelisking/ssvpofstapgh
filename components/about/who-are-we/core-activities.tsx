@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 function CoreActivities() {
   return (
-    <section className="mt-32">
+    <section className="mt-12 md:mt-20">
       <h2 className="text-primary text-3xl font-bold">
         Core Activities
       </h2>

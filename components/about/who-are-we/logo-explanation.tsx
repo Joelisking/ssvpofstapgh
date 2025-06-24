@@ -4,7 +4,7 @@ import React from 'react';
 
 function LogoExplanation() {
   return (
-    <section className="mt-32">
+    <section className="mt-12 md:mt-20">
       <Container className="bg-secondary rounded-2xl">
         <div className="p-4 sm:p-8">
           <div className="flex items-center gap-4 mb-6">

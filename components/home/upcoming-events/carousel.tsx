@@ -25,6 +25,11 @@ const CardCarousel = () => {
             animate={{
               x: offset,
             }}
+            transition={{
+              type: 'tween',
+              ease: 'easeInOut',
+              duration: 0.4,
+            }}
             className="flex">
             {items.map((item) => {
               return <Card key={item.id} {...item} />;

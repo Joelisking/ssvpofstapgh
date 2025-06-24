@@ -16,7 +16,7 @@ const images = [
 
 function CoreActivities() {
   return (
-    <Container className="mt-8 sm:mt-12">
+    <Container className="mt-12 md:mt-20">
       <section className="bg-secondary p-4 sm:p-6 md:p-8 rounded-2xl">
         <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
           <Image

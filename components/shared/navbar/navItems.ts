@@ -26,5 +26,5 @@ export const navItems: NavItem[] = [
     text: 'Gallery',
     url: '/gallery',
   },
-  { text: 'Contact', url: '/contact' },
+  { text: 'Get in Touch', url: '/contact' },
 ];
