@@ -5,13 +5,14 @@ import Container from '../shared/container';
 import Carousel from '../shared/multi-carousel';
 
 const images = [
-  { src: '/home/hero/carousel/1.jpeg', alt: 'Training 1' },
-  { src: '/home/hero/carousel/2.jpeg', alt: 'Training 2' },
-  { src: '/home/hero/carousel/3.jpg', alt: 'Training 3' },
-  { src: '/home/hero/carousel/4.jpeg', alt: 'Training 4' },
-  { src: '/home/news/1.jpg', alt: 'Training 5' },
-  { src: '/home/news/2.jpg', alt: 'Training 6' },
-  { src: '/home/news/3.jpeg', alt: 'Training 7' },
+  { src: '/activities/core-activities/1.png', alt: 'Activity 1' },
+  { src: '/activities/core-activities/2.png', alt: 'Activity 2' },
+  { src: '/activities/core-activities/3.png', alt: 'Activity 3' },
+  { src: '/activities/core-activities/4.png', alt: 'Activity 4' },
+  { src: '/activities/core-activities/5.png', alt: 'Activity 5' },
+  { src: '/activities/core-activities/6.png', alt: 'Activity 6' },
+  { src: '/activities/core-activities/7.png', alt: 'Activity 7' },
+  { src: '/activities/core-activities/8.png', alt: 'Activity 8' },
 ];
 
 function CoreActivities() {

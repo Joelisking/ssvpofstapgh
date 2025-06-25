@@ -1,4 +1,3 @@
-import { items } from '@/lib/data';
 import { BREAKPOINTS, CARD_SIZE } from '@/lib/utilities';
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -8,10 +7,12 @@ function Buttons({
   width,
   offset,
   setOffset,
+  itemsLength,
 }: {
   width: number;
   offset: number;
   setOffset: (offset: number | ((prev: number) => number)) => void;
+  itemsLength: number;
 }) {
   const CAN_SHIFT_LEFT = offset < 0;
 
@@ -19,7 +20,7 @@ function Buttons({
     width > BREAKPOINTS.lg ? 3 : width > BREAKPOINTS.sm ? 2 : 1;
 
   const CAN_SHIFT_RIGHT =
-    Math.abs(offset) < CARD_SIZE * (items.length - CARD_BUFFER);
+    Math.abs(offset) < CARD_SIZE * (itemsLength - CARD_BUFFER);
 
   const shiftLeft = () => {
     if (!CAN_SHIFT_LEFT) {

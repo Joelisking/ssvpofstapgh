@@ -19,7 +19,7 @@ function NewsCard({
 }: NewsCardProps) {
   return (
     <Link href={link} passHref>
-      <div className="group bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+      <div className="rounded-2xl overflow-hidden">
         {/* Mobile Layout: Stacked */}
         <div className="block sm:hidden">
           <div className="relative h-48 w-full">
@@ -70,7 +70,7 @@ function NewsCard({
                   {date}
                 </p>
               </div>
-              <span className="inline-flex items-center text-sm border border-primary py-2 px-4 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-200">
+              <span className="inline-flex items-center text-sm border border-primary py-2 px-4 rounded-full text-primary hover:bg-primary hover:text-white transition-colors duration-200">
                 View
                 <MoveRight className="w-4 h-4 ml-2" />
               </span>

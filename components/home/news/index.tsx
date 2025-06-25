@@ -1,16 +1,30 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
-import { newsData } from '@/lib/data';
+import { getAllNews, NewsItem } from '@/lib/sanity';
 import { NewsCard } from './news-card';
 import { Button } from '@/components/ui/button';
 import { MoveLeft, MoveRight } from 'lucide-react';
 import SectionHeader from '@/components/shared/section-header';
 import Container from '@/components/shared/container';
+import Link from 'next/link';
 
 export const NewsSection = () => {
+  const [news, setNews] = useState<NewsItem[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getAllNews().then((data) => {
+      setNews(data);
+      setLoading(false);
+    });
+  }, []);
+
+  // Filter to show only the first 8 news items
+  const displayedNews = news.slice(0, 8);
+
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
@@ -28,8 +42,23 @@ export const NewsSection = () => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
 
+  if (loading) {
+    return (
+      <section className="mt-8 sm:mt-14 lg:mt-20">
+        <Container>
+          <div className="flex items-center justify-center py-12">
+            <div className="flex items-center space-x-2">
+              <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
+              <span className="text-gray-600">Loading news...</span>
+            </div>
+          </div>
+        </Container>
+      </section>
+    );
+  }
+
   return (
-    <section className="py-8 sm:py-12 lg:py-16 bg-gray-50">
+    <section className="mt-8 sm:mt-14 lg:mt-20">
       <Container>
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-6 mb-6 sm:mb-8">
           <div className="sm:hidden">
@@ -71,14 +100,28 @@ export const NewsSection = () => {
         </div>
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
-            {newsData.map((news) => (
+            {displayedNews.map((item) => (
               <div
-                key={news.id}
+                key={item.id}
                 className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] xl:flex-[0_0_25%] min-w-0 pl-2 sm:pl-4">
-                <NewsCard {...news} />
+                <NewsCard
+                  image={item.imageUrl}
+                  date={item.date}
+                  title={item.title}
+                  link={`/news/${item.slug}`}
+                />
               </div>
             ))}
           </div>
+        </div>
+
+        {/* View All Button */}
+        <div className="flex justify-center mt-8">
+          <Link href="/news">
+            <Button className="px-8 py-3 text-lg font-semibold">
+              View All News
+            </Button>
+          </Link>
         </div>
       </Container>
     </section>

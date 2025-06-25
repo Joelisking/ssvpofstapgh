@@ -5,13 +5,14 @@ import Container from '../shared/container';
 import Carousel from '../shared/multi-carousel';
 
 const images = [
-  { src: '/home/hero/carousel/1.jpeg', alt: 'Training 1' },
-  { src: '/home/hero/carousel/2.jpeg', alt: 'Training 2' },
-  { src: '/home/hero/carousel/3.jpg', alt: 'Training 3' },
-  { src: '/home/hero/carousel/4.jpeg', alt: 'Training 4' },
-  { src: '/home/news/1.jpg', alt: 'Training 5' },
-  { src: '/home/news/2.jpg', alt: 'Training 6' },
-  { src: '/home/news/3.jpeg', alt: 'Training 7' },
+  { src: '/activities/training/1.png', alt: 'Training 1' },
+  { src: '/activities/training/2.png', alt: 'Training 2' },
+  { src: '/activities/training/3.png', alt: 'Training 3' },
+  { src: '/activities/training/4.png', alt: 'Training 4' },
+  { src: '/activities/training/5.png', alt: 'Training 5' },
+  { src: '/activities/training/6.png', alt: 'Training 6' },
+  { src: '/activities/training/7.png', alt: 'Training 7' },
+  { src: '/activities/training/8.png', alt: 'Training 8' },
 ];
 
 function Training() {

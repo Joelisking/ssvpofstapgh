@@ -4,7 +4,7 @@ import { MoveRight } from 'lucide-react';
 
 export const Objective = () => {
   return (
-    <section className="relative bg-gradient-to-r from-[#012956] via-[#013FB1] to-[#3F87FF] py-12 sm:py-16 lg:py-20 text-white">
+    <section className="relative bg-gradient-to-r from-[#012956] via-[#013FB1] to-[#3F87FF] mt-8 sm:mt-14 lg:mt-20 py-12 sm:py-16 lg:py-20 text-white">
       <div className="absolute inset-0 z-0 opacity-10">
         {/* You can add a background pattern here if needed */}
       </div>

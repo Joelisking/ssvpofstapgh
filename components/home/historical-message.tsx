@@ -7,7 +7,7 @@ import SectionHeader from '../shared/section-header';
 
 function HistoricalMessage() {
   return (
-    <section className="px-4 sm:px-6 md:px-8 py-4 sm:py-16 lg:py-20">
+    <section className="mt-8 sm:mt-14 lg:mt-20">
       <Container className="grid grid-cols-1 xl:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
         <div className="text-left md:order-1">
           <p className="text-xs sm:text-sm font-semibold text-gray-500 mb-2 sm:mb-3">
@@ -35,7 +35,7 @@ function HistoricalMessage() {
               Society of St.Vincent De Paul, Legon Conference
             </SectionHeader>
           </div>
-          <div className="hidden md:block lg:hidden">
+          <div className="hidden lg:block xl:hidden">
             <SectionHeader
               highlightedWord="St.Vincent De Paul"
               size="base"
@@ -43,7 +43,7 @@ function HistoricalMessage() {
               Society of St.Vincent De Paul, Legon Conference
             </SectionHeader>
           </div>
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             <SectionHeader
               highlightedWord="St.Vincent De Paul"
               size="lg"

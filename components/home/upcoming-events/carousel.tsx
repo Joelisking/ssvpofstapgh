@@ -1,20 +1,23 @@
 'use client';
-import { items } from '@/lib/data';
 import { motion } from 'framer-motion';
-
 import useMeasure from 'react-use-measure';
 import { Card } from './card';
 import Buttons from './buttons';
 import { useState, useEffect } from 'react';
+import { getUpcomingEvents, UpcomingEvent } from '@/lib/sanity';
 
 const CardCarousel = () => {
   const [ref, { width }] = useMeasure();
   const [offset, setOffset] = useState(0);
+  const [events, setEvents] = useState<UpcomingEvent[]>([]);
 
-  // Reset offset when screen size changes
   useEffect(() => {
     setOffset(0);
   }, [width]);
+
+  useEffect(() => {
+    getUpcomingEvents().then(setEvents);
+  }, []);
 
   return (
     <section ref={ref} className="w-full">
@@ -31,9 +34,15 @@ const CardCarousel = () => {
               duration: 0.4,
             }}
             className="flex">
-            {items.map((item) => {
-              return <Card key={item.id} {...item} />;
-            })}
+            {events.map((event) => (
+              <Card
+                key={event.id}
+                imageUrl={event.imageUrl}
+                title={event.title}
+                description={event.description}
+                date={event.date}
+              />
+            ))}
           </motion.div>
         </div>
 
@@ -41,6 +50,7 @@ const CardCarousel = () => {
           width={width}
           offset={offset}
           setOffset={setOffset}
+          itemsLength={events.length}
         />
       </div>
     </section>
