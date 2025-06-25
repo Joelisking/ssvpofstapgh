@@ -6,7 +6,6 @@ export const sanityClient = createClient({
   dataset: 'production',
   apiVersion: 'v2025-06-25',
   useCdn: false,
-  withCredentials: true,
 });
 
 export interface UpcomingEvent {
