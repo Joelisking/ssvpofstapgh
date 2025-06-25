@@ -80,6 +80,7 @@ export async function getAllNews(): Promise<NewsItem[]> {
     body
   }`;
   const news: SanityNews[] = await sanityClient.fetch(query);
+  console.log('News', news);
   return news.map((item) => ({
     id: item._id,
     title: item.title,
