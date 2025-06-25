@@ -1,6 +1,7 @@
 import Container from '@/components/shared/container';
 import { Button } from '@/components/ui/button';
 import { MoveRight } from 'lucide-react';
+import Link from 'next/link';
 
 export const Objective = () => {
   return (
@@ -56,11 +57,16 @@ export const Objective = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button className="bg-card-foreground text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3">
-                Who we are
-                <MoveRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <Link href="/who-are-we">
+                  Who we are
+                  <MoveRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
               <Button className="bg-card-foreground text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3">
-                What we do
+                <Link href="/what-we-do">
+                  What we do
+                  <MoveRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
                 <MoveRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
