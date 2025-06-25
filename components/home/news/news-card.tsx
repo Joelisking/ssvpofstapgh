@@ -17,7 +17,7 @@ export const NewsCard = ({
 }: NewsCardProps) => {
   return (
     <Link href={link} passHref>
-      <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+      <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
         <div className="relative h-48 sm:h-56 w-full">
           <Image
             src={image}

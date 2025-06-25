@@ -8,7 +8,10 @@ export const navItems: NavItem[] = [
   // { text: 'Home', url: '/' },
   {
     text: 'About Us',
-    subItems: [{ text: 'Who Are We', url: '/who-are-we' }],
+    subItems: [
+      { text: 'Who Are We', url: '/who-are-we' },
+      { text: 'What We Do', url: '/what-we-do' },
+    ],
   },
   {
     text: 'Programs',

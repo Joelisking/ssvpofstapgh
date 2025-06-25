@@ -99,7 +99,7 @@ export const NewsSection = () => {
           </div>
         </div>
         <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex">
+          <div className="flex py-4">
             {displayedNews.map((item) => (
               <div
                 key={item.id}
