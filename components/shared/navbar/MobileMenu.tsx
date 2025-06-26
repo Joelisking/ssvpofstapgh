@@ -39,7 +39,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
         ))}
         <div className="mt-2">
           <Button onClick={handleButtonClick}>
-            <Link href={'/schedule'}>Schedule a Call</Link>
+            <Link href={'#'}>Donate Now</Link>
           </Button>
         </div>
       </div>
