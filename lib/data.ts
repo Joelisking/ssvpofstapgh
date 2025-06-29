@@ -170,7 +170,7 @@ export const executivesData = [
   },
   {
     role: 'Assistant Organising Secretary',
-    name: 'Bro. Emilio Owusu Asante',
+    name: 'Bro. Gabriel Apatewen Ankasiba',
   },
 ];
 

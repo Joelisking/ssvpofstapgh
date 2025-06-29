@@ -16,7 +16,7 @@ const Buttons = ({
   <div className="flex items-center gap-4">
     <div className="hidden md:block">
       <Button className="hover:scale-105 transition-all duration-300">
-        <Link className="flex items-center gap-1" href={'#'}>
+        <Link className="flex items-center gap-1" href={'/donate'}>
           Donate Now
           <Icon name="ArrowRight" />
         </Link>

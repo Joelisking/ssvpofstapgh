@@ -1,8 +1,9 @@
 import React from 'react';
-import Container from '../../shared/container';
-import Carousel from '../../shared/carousel';
-import Table, { TableColumn } from './table';
+import Container from '@/components/shared/container';
+import Carousel from '@/components/shared/carousel';
 import { executivesCarouselImages, executivesData } from '@/lib/data';
+import Table, { TableColumn } from './table';
+import Image from 'next/image';
 
 const columns: TableColumn<{ role: string; name: string }>[] = [
   { header: 'ROLE', accessor: 'role' },
@@ -14,11 +15,18 @@ function Executives() {
     <section className="mt-12 md:mt-20">
       <Container className="">
         <div className="bg-secondary rounded-2xl p-4 sm:p-6 md:p-8">
-          <Table
-            columns={columns}
-            data={executivesData}
-            className="mb-6"
-          />
+          <div className="flex items-center gap-4 mb-6">
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              width={80}
+              height={80}
+              className="rounded-full"
+            />
+            <h2 className="text-3xl md:text-4xl text-primary font-semibold">
+              Executives
+            </h2>
+          </div>
           <p className="text-gray-700 text-sm mt-4 mb-8">
             The newly elected president, Bro. Gabriel Asempa Antwi and
             his executives were inaugurated in the presence members of
@@ -27,8 +35,13 @@ function Executives() {
             members of the conference were present at the induction
             ceremony in their SSVP T-Shirt to show their support to
             the new executives. The list of the new Presidents and
-            executives are;
+            executives is;
           </p>
+          <Table
+            columns={columns}
+            data={executivesData}
+            className="mb-6"
+          />
           <Carousel
             images={executivesCarouselImages}
             height={'500px'}

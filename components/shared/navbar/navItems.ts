@@ -9,7 +9,7 @@ export const navItems: NavItem[] = [
   {
     text: 'About Us',
     subItems: [
-      { text: 'Who Are We', url: '/who-are-we' },
+      { text: 'Who We Are', url: '/who-are-we' },
       { text: 'What We Do', url: '/what-we-do' },
     ],
   },
