@@ -4,7 +4,7 @@ import Container from '../shared/container';
 const cards = [
   {
     title: 'WHATSAPP',
-    detail: '+23354 272 8856',
+    detail: '+233542728856',
   },
   {
     title: 'ADDRESS',
