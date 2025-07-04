@@ -43,14 +43,11 @@ function Footer() {
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <Link href={''}>
+              <Link href={'https://www.facebook.com/share/172qwoYvmE/?mibextid=wwXIfr'}>
                 <Icon name="Facebook" fill="#fff" />
               </Link>
-              <Link href={''}>
-                <Icon name="Twitter" fill="#fff" />
-              </Link>
-              <Link href={''}>
-                <Icon name="Linkedin" fill="#fff" />
+              <Link href={'https://www.instagram.com/ssvpstap?igsh=MTNtaXhteXJqZDQy&utm_source=qr'}>
+                <Icon name="Instagram" fill="#fff" />
               </Link>
             </div>
           </div>
