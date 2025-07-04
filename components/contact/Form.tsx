@@ -29,7 +29,7 @@ function Form() {
     const encodedMessage = encodeURIComponent(whatsappMessage);
 
     // WhatsApp number (using the one from Info component)
-    const whatsappNumber = '233594765977'; // Removed the leading 0 and + for WhatsApp API
+    const whatsappNumber = '233542728856'; // Removed the leading 0 and + for WhatsApp API
 
     // Open WhatsApp link
     window.open(
