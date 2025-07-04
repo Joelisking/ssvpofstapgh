@@ -21,7 +21,7 @@ function InternationalLink() {
               Click the button below to view our international website
             </p>
             <Button size="lg" className="mt-4">
-              <Link href={'https://www.ssvpglobal.org/en/'}>
+              <Link href={'https://www.ssvpglobal.org/en/'} target='_blank'>
                 View Page
               </Link>
             </Button>
