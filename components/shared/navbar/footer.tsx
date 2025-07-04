@@ -47,7 +47,7 @@ function Footer() {
                 <Icon name="Facebook" fill="#fff" />
               </Link>
               <Link href={'https://www.instagram.com/ssvpstap?igsh=MTNtaXhteXJqZDQy&utm_source=qr'}>
-                <Icon name="Instagram" fill="#fff" />
+                <Icon name="Instagram" />
               </Link>
             </div>
           </div>
