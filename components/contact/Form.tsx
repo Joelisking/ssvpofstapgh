@@ -1,11 +1,17 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { formSchema, FormSchema } from './formSchema';
 import FormField from './FormField';
 
 function Form() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    'idle' | 'success' | 'error'
+  >('idle');
+  const [submitMessage, setSubmitMessage] = useState('');
+
   const {
     register,
     handleSubmit,
@@ -15,30 +21,54 @@ function Form() {
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = (data: FormSchema) => {
-    // Format the message for WhatsApp
-    const whatsappMessage =
-      `*New Contact Form Submission*\n\n` +
-      `*Name:* ${data.firstName} ${data.lastName}\n` +
-      `*Email:* ${data.email}\n` +
-      `*Phone:* ${data.phone}\n` +
-      `*Subject:* ${data.subject}\n` +
-      `*Message:* ${data.message}`;
+  const onSubmit = async (data: FormSchema) => {
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setSubmitMessage('');
 
-    // Encode the message for URL
-    const encodedMessage = encodeURIComponent(whatsappMessage);
+    try {
+      // Web3Forms endpoint
+      const response = await fetch(
+        'https://api.web3forms.com/submit',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+            name: `${data.firstName} ${data.lastName}`,
+            email: data.email,
+            phone: data.phone,
+            subject: data.subject,
+            message: data.message,
+          }),
+        }
+      );
 
-    // WhatsApp number (using the one from Info component)
-    const whatsappNumber = '233542728856'; // Removed the leading 0 and + for WhatsApp API
+      const result = await response.json();
 
-    // Open WhatsApp link
-    window.open(
-      `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
-      '_blank'
-    );
-
-    // Reset the form
-    reset();
+      if (result.success) {
+        setSubmitStatus('success');
+        setSubmitMessage(
+          'Thank you! Your message has been sent successfully.'
+        );
+        reset();
+      } else {
+        // Show the specific error message from Web3Forms
+        setSubmitStatus('error');
+        setSubmitMessage(result.message || 'Failed to send message');
+        console.error('Web3Forms error:', result);
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      setSubmitMessage(
+        'Sorry, there was an error sending your message. Please try again.'
+      );
+      console.error('Form submission error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -46,6 +76,19 @@ function Form() {
       <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tighter text-primary">
         Society Of St. Vincent De Paul, Legon Conference
       </h2>
+
+      {/* Status Messages */}
+      {submitStatus === 'success' && (
+        <div className="mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+          {submitMessage}
+        </div>
+      )}
+
+      {submitStatus === 'error' && (
+        <div className="mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+          {submitMessage}
+        </div>
+      )}
 
       <form
         onSubmit={handleSubmit(onSubmit)}
@@ -104,8 +147,9 @@ function Form() {
 
         <button
           type="submit"
-          className="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-accent-dark transition-colors">
-          Send Message
+          disabled={isSubmitting}
+          className="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-accent-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+          {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
       </form>
     </div>
