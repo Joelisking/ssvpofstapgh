@@ -2,6 +2,13 @@
 import { FieldError, UseFormRegister } from 'react-hook-form';
 import { FormSchema } from './formSchema';
 import { Icon } from '@/components/ui';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 
 interface FormFieldProps {
   name: keyof FormSchema;
@@ -9,6 +16,7 @@ interface FormFieldProps {
   label: string;
   placeholder: string;
   isTextArea?: boolean;
+  isSelect?: boolean;
   register: UseFormRegister<FormSchema>;
   errors: Partial<Record<keyof FormSchema, FieldError>>;
 }
@@ -74,12 +82,51 @@ const TextAreaField = ({
   </div>
 );
 
+const SelectField = ({
+  name,
+  label,
+  placeholder,
+  register,
+  errors,
+}: FormFieldProps) => (
+  <div className="relative">
+    {label && (
+      <label
+        htmlFor={name}
+        className="block mb-1 text-sm font-medium text-gray-700">
+        {label}
+      </label>
+    )}
+    <Select
+      onValueChange={(value) =>
+        register(name).onChange({ target: { value, name } })
+      }>
+      <SelectTrigger
+        className={`w-full bg-[#F2F2F2] text-black focus:ring-1 focus:ring-[#0099FF] active:ring-0 focus:outline-none placeholder:text-gray-500 transition-all duration-300 p-2 sm:p-3 text-sm rounded-lg ${
+          errors[name] ? 'border-red-500' : ''
+        }`}>
+        <SelectValue placeholder={placeholder} />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem value="General Enquiries">
+          General Enquiries
+        </SelectItem>
+        <SelectItem value="Ask for support">
+          Ask for support
+        </SelectItem>
+      </SelectContent>
+    </Select>
+  </div>
+);
+
 const FormField = (props: FormFieldProps) => {
   return (
     <div className="flex flex-col gap-2 sm:gap-3 mb-4 sm:mb-6">
       <div className="relative">
         {props.isTextArea ? (
           <TextAreaField {...props} />
+        ) : props.isSelect ? (
+          <SelectField {...props} />
         ) : (
           <InputField {...props} />
         )}

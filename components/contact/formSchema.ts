@@ -7,7 +7,9 @@ export const formSchema = z.object({
   phone: z
     .string()
     .min(10, 'Phone number must be at least 10 digits'),
-  subject: z.string().optional(),
+  subject: z.enum(['General Enquiries', 'Ask for support'], {
+    required_error: 'Please select a subject',
+  }),
   message: z.string().min(1, 'Message is required'),
 });
 

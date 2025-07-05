@@ -22,7 +22,7 @@ function Form() {
       `*Name:* ${data.firstName} ${data.lastName}\n` +
       `*Email:* ${data.email}\n` +
       `*Phone:* ${data.phone}\n` +
-      (data.subject ? `*Subject:* ${data.subject}\n` : '') +
+      `*Subject:* ${data.subject}\n` +
       `*Message:* ${data.message}`;
 
     // Encode the message for URL
@@ -83,6 +83,16 @@ function Form() {
             errors={errors}
           />
         </div>
+
+        <FormField
+          name="subject"
+          label="Subject"
+          placeholder="Select a subject"
+          isSelect
+          register={register}
+          errors={errors}
+        />
+
         <FormField
           name="message"
           label="Message"
