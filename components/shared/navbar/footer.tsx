@@ -38,16 +38,28 @@ function Footer() {
           <div className="flex items-center justify-between">
             <div>
               <p>
-                Copyright © 2025 Society of St. Vincent de Paul, Legon
-                Conference. All rights reserved.
+                Copyright © 2025 Society of St. Vincent de Paul,
+                Legon Conference. All rights reserved.
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <Link href={'https://www.facebook.com/share/172qwoYvmE/?mibextid=wwXIfr'}>
-                <Icon name="Facebook" fill="#fff" />
+              <Link
+                href={
+                  'https://www.facebook.com/share/172qwoYvmE/?mibextid=wwXIfr'
+                }
+                target="_blank">
+                <Icon
+                  name="Facebook"
+                  fill="#00C2FF"
+                  color="#00C2FF"
+                />
               </Link>
-              <Link href={'https://www.instagram.com/ssvpstap?igsh=MTNtaXhteXJqZDQy&utm_source=qr'}>
-                <Icon name="Instagram" />
+              <Link
+                href={
+                  'https://www.instagram.com/ssvpstap?igsh=MTNtaXhteXJqZDQy&utm_source=qr'
+                }
+                target="_blank">
+                <Icon name="Instagram" color="#00C2FF" />
               </Link>
             </div>
           </div>
