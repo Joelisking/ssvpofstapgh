@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState, useCallback, useEffect } from 'react';
-import Image from 'next/image';
 import { Lightbox } from '@/components/gallery/lightbox';
 import { GalleryImage } from '@/lib/types';
 
@@ -171,8 +171,8 @@ export function Gallery({
                     layout === 'rows'
                       ? 'aspect-[16/9]'
                       : layout === 'grid'
-                      ? 'aspect-square'
-                      : ''
+                        ? 'aspect-square'
+                        : ''
                   }
                 `}
               onClick={() => isClickable && openLightbox(index)}
@@ -187,12 +187,9 @@ export function Gallery({
                   openLightbox(index);
                 }
               }}>
-              <Image
+              <img
                 src={img.src}
                 alt={img.alt || `Gallery image ${index + 1}`}
-                fill={layout !== 'masonry'}
-                width={layout === 'masonry' ? 400 : undefined}
-                height={layout === 'masonry' ? 600 : undefined}
                 className={`
                     object-cover transition-transform duration-300 group-hover:scale-105
                     ${
@@ -201,8 +198,6 @@ export function Gallery({
                         : 'w-full h-full'
                     }
                   `}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                priority={index < 4}
                 loading={index < 4 ? 'eager' : 'lazy'}
               />
 
