@@ -29,7 +29,7 @@ type SanityEvent = {
 };
 
 export async function getUpcomingEvents(): Promise<UpcomingEvent[]> {
-  const query = `*[_type == "upcomingEvent"] | order(date asc) {
+  const query = `*[_type == "upcomingEvent"] | order(date desc) {
     _id,
     title,
     description,
