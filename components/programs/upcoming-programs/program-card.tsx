@@ -1,4 +1,5 @@
 import React from 'react';
+import { format } from 'date-fns';
 
 interface ProgramCardProps {
   date: string;
@@ -13,7 +14,7 @@ function ProgramCard({ date, title, description }: ProgramCardProps) {
         {/* Header with date and title */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2 lg:gap-3">
           <span className="text-primary uppercase font-bold text-base sm:text-lg lg:text-xl">
-            {date}
+            {format(new Date(date), 'dd MMMM, yyyy')}
           </span>
           <span className="hidden sm:inline text-primary font-bold text-lg lg:text-xl">
             -

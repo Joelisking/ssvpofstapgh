@@ -118,6 +118,36 @@ export async function getNewsBySlug(
   };
 }
 
+export interface Program {
+  id: string;
+  title: string;
+  description: string;
+  date: string;
+}
+
+type SanityProgram = {
+  _id: string;
+  title: string;
+  description: string;
+  date: string;
+};
+
+export async function getPrograms(): Promise<Program[]> {
+  const query = `*[_type == "program"] | order(date desc) {
+    _id,
+    title,
+    description,
+    date
+  }`;
+  const programs: SanityProgram[] = await sanityClient.fetch(query);
+  return programs.map((program) => ({
+    id: program._id,
+    title: program.title,
+    description: program.description,
+    date: program.date,
+  }));
+}
+
 // Helper function to get a plain text excerpt from rich text
 export function getExcerpt(
   body: any[],
