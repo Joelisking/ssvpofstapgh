@@ -1,3 +1,4 @@
+'use client';
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useCallback, useEffect } from 'react';
 import { Lightbox } from '@/components/gallery/lightbox';
