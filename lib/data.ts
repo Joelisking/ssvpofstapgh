@@ -1,21 +1,15 @@
-import carouselImg1 from '@/public/home/hero/carousel/1.jpg';
 import carouselImg2 from '@/public/home/hero/carousel/2.jpg';
 import carouselImg3 from '@/public/home/hero/carousel/3.jpg';
 import carouselImg4 from '@/public/home/hero/carousel/4.jpg';
-import carouselImg5 from '@/public/home/hero/carousel/5.jpg';
 import carouselImg6 from '@/public/home/hero/carousel/6.jpg';
-import carouselImg7 from '@/public/home/hero/carousel/7.jpg';
 import { ItemType } from './types';
 // import { GalleryImage } from '@/lib/types';
 
 export const carouselImages = [
-  { src: carouselImg1, alt: 'Hero Image 1' },
+  { src: carouselImg4, alt: 'Hero Image 4' },
   { src: carouselImg2, alt: 'Hero Image 2' },
   { src: carouselImg3, alt: 'Hero Image 3' },
-  { src: carouselImg4, alt: 'Hero Image 4' },
-  { src: carouselImg5, alt: 'Hero Image 5' },
   { src: carouselImg6, alt: 'Hero Image 6' },
-  { src: carouselImg7, alt: 'Hero Image 7' },
 ];
 
 export const items: ItemType[] = [
