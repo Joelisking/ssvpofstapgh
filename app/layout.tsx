@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { Manrope } from 'next/font/google';
 import './globals.css';
-import Navbar from '@/components/shared/navbar';
-import Footer from '@/components/shared/navbar/footer';
-import WhatsAppButton from '@/components/shared/whatsapp-button';
+// import Navbar from '@/components/shared/navbar';
+// import Footer from '@/components/shared/navbar/footer';
+// import WhatsAppButton from '@/components/shared/whatsapp-button';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -24,10 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${manrope.variable} antialiased`}>
       <body className={`antialiased`}>
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
-        <Footer />
-        <WhatsAppButton />
+        {/* <Footer /> */}
+        {/* <WhatsAppButton /> */}
       </body>
     </html>
   );
