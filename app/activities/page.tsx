@@ -3,14 +3,14 @@
 // import PageHeader from '@/components/shared/page-header';
 // import React from 'react';
 
-// function Activities() {
-//   return (
-//     <main className="min-h-screen">
-//       <PageHeader title="Activities" subtitle="Our Outreaches" />
-//       <Training />
-//       <CoreActivities />
-//     </main>
-//   );
-// }
+function Activities() {
+  //   return (
+  // <main className="min-h-screen">
+  //   <PageHeader title="Activities" subtitle="Our Outreaches" />
+  //   <Training />
+  //   <CoreActivities />
+  // </main>
+  //   );
+}
 
-// export default Activities;
+export default Activities;

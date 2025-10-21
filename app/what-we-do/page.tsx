@@ -3,19 +3,19 @@
 // import PageHeader from '@/components/shared/page-header';
 // import React from 'react';
 
-// function WhatWeDo() {
-//   return (
-//     <main>
-//       <PageHeader
-//         title="About Us"
-//         subtitle="What We Do"
-//         //  backgroundImage='/heros/what-we-do-hero.jpg'
-//         position="top"
-//       />
-//       <MainWork />
-//       <Policies />
-//     </main>
-//   );
-// }
+function WhatWeDo() {
+  //   return (
+  //     <main>
+  //       <PageHeader
+  //         title="About Us"
+  //         subtitle="What We Do"
+  //         //  backgroundImage='/heros/what-we-do-hero.jpg'
+  //         position="top"
+  //       />
+  //       <MainWork />
+  //       <Policies />
+  //     </main>
+  //   );
+}
 
-// export default WhatWeDo;
+export default WhatWeDo;

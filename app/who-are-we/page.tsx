@@ -10,31 +10,31 @@
 // import Container from '@/components/shared/container';
 // import PageHeader from '@/components/shared/page-header';
 
-// function WhoAreWe() {
-//   return (
-//     <main>
-//       <PageHeader
-//         title="About Us"
-//         subtitle="History of the Society of St. Vincent de Paul, Legon Conference"
-//         backgroundImage="/heros/who-are-we-hero.png"
-//       />
-//       <Executives />
-//       <History />
-//       <section className="mt-12 md:mt-20">
-//         <Container>
-//           <div className="p-8 bg-secondary rounded-2xl">
-//             <FoundingMembers />
-//             <Brothers />
-//             <Sisters />
-//             <Presidents />
-//           </div>
-//           <CoreActivities />
-//           <Fundraising />
-//           <LogoExplanation />
-//         </Container>
-//       </section>
-//     </main>
-//   );
-// }
+function WhoAreWe() {
+  //   return (
+  //     <main>
+  //       <PageHeader
+  //         title="About Us"
+  //         subtitle="History of the Society of St. Vincent de Paul, Legon Conference"
+  //         backgroundImage="/heros/who-are-we-hero.png"
+  //       />
+  //       <Executives />
+  //       <History />
+  //       <section className="mt-12 md:mt-20">
+  //         <Container>
+  //           <div className="p-8 bg-secondary rounded-2xl">
+  //             <FoundingMembers />
+  //             <Brothers />
+  //             <Sisters />
+  //             <Presidents />
+  //           </div>
+  //           <CoreActivities />
+  //           <Fundraising />
+  //           <LogoExplanation />
+  //         </Container>
+  //       </section>
+  //     </main>
+  //   );
+}
 
-// export default WhoAreWe;
+export default WhoAreWe;
